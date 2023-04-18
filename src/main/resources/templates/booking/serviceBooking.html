@@ -52,10 +52,37 @@
             </p>
           </div>
           <div class="form-group mb-3">
+            <label class="form-label">From <span style="color: crimson">*</span></label>
+            <input class="form-control"
+                   id="startDate"
+                   name="startDate"
+                   required
+                   th:field="*{startDate}"
+                   type="date"
+            />
+            <p th:errors="*{startDate}" class="text-danger"
+               th:if="${#fields.hasErrors('startDate')}">
+            </p>
+          </div>
+          <div class="form-group mb-3">
+            <label class="form-label">To <span style="color: crimson">*</span></label>
+            <input class="form-control"
+                   id="endDate"
+                   name="startDate"
+                   required
+                   th:field="*{endDate}"
+                   type="date"
+            />
+            <p th:errors="*{endDate}" class="text-danger"
+               th:if="${#fields.hasErrors('endDate')}">
+            </p>
+          </div>
+          <div class="form-group mb-3">
             <label class="form-label">Address <span style="color: crimson">*</span></label>
             <input class="form-control"
                    id="address"
                    name="address"
+                   required
                    placeholder="Enter your address"
                    th:field="*{address}"
                    type="text"
@@ -69,6 +96,7 @@
             <input class="form-control"
                    id="phone"
                    name="phone"
+                   required
                    placeholder="Enter your phone number"
                    th:field="*{num}"
                    type="text"

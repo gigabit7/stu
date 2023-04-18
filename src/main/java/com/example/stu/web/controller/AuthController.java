@@ -1,7 +1,9 @@
 package com.example.stu.web.controller;
 
+import com.example.stu.entity.Booking;
 import com.example.stu.entity.ServiceProvider;
 import com.example.stu.entity.User;
+import com.example.stu.service.IBookingService;
 import com.example.stu.service.IProviderService;
 import com.example.stu.service.IServiceService;
 import com.example.stu.service.IUserService;
@@ -18,6 +20,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
+
 @Controller
 @AllArgsConstructor
 public class AuthController {
@@ -25,6 +29,8 @@ public class AuthController {
     private final IUserService userService;
 
     private final IProviderService providerService;
+
+    private final IBookingService bookingService;
 
     private final IServiceService serviceService;
 
@@ -42,7 +48,9 @@ public class AuthController {
                 if ((serviceProvider.getService() == null)) {
                     model.addAttribute("hasService", false);
                 } else {
+                    List<Booking> bookingRequests = bookingService.getUnconfirmedBookingsByProviderId(serviceProvider.getId());
                     model.addAttribute("hasService", true);
+                    model.addAttribute("booking_requests", bookingRequests);
                 }
             }
 

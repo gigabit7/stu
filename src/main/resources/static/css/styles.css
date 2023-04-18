@@ -43,3 +43,9 @@ table {
     border-spacing: 0;
 }
 /*reset css*/
+
+.section-title{
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem 0;
+}

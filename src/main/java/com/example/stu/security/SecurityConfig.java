@@ -14,19 +14,34 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
+/**
+ * This Class is used to configure the security of the application.
+ */
 @Configuration
 @EnableWebSecurity
 @AllArgsConstructor
 public class SecurityConfig {
 
     private final UserDetailsService userDetailsService;
-    private static final String[]  userURLs = {"/service/prev", "/service/new", "/booking/**"};
+    private static final String[] userURLs = {"/service/prev", "/service/new"};
 
+    /**
+     * This method is used to configure the password encoder.
+     *
+     * @return the password encoder
+     */
     @Bean
-    public static PasswordEncoder passwordEncoder(){
+    public static PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
+    /**
+     * This method is used to configure the security of the application.
+     *
+     * @param http the http security
+     * @return the security filter chain
+     * @throws Exception if an error occurs
+     */
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.csrf().disable()
@@ -35,6 +50,7 @@ public class SecurityConfig {
                                 .requestMatchers("/").permitAll()
                                 .requestMatchers(userURLs).hasRole("USER")
                                 .requestMatchers("/service/edit").hasRole("PROVIDER")
+                                .requestMatchers("/booking/**").hasAnyRole("PROVIDER", "USER")
                                 .requestMatchers("/edit").authenticated()
 
                 ).formLogin(
@@ -51,6 +67,12 @@ public class SecurityConfig {
         return http.build();
     }
 
+    /**
+     * This method is used to configure the authentication manager builder.
+     *
+     * @param auth the authentication manager builder
+     * @throws Exception if an error occurs
+     */
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth
@@ -58,9 +80,14 @@ public class SecurityConfig {
                 .passwordEncoder(passwordEncoder());
     }
 
+    /**
+     * This method is used to configure the web security customizer.
+     *
+     * @return the web security customizer
+     */
     @Bean
     WebSecurityCustomizer webSecurityCustomizer() {
         return (web) -> web.ignoring()
-                .requestMatchers("/images/**", "/webjars/**", "/js/**","/css/**");
+                .requestMatchers("/images/**", "/webjars/**", "/js/**", "/css/**");
     }
 }

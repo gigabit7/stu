@@ -6,7 +6,9 @@ import com.example.stu.service.IProviderService;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
-
+/** This class implements the methods defined in the IProviderService interface.
+ * See the IProviderService interface for more information.
+ * */
 @Service
 @AllArgsConstructor
 public class IProviderServiceImpl implements IProviderService {

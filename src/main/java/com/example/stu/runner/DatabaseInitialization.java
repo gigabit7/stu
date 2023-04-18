@@ -18,20 +18,25 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * This class is used to initialize the database with some default values.
+ * It is executed when the application starts.
+ */
 @Component
 @AllArgsConstructor
 public class DatabaseInitialization implements ApplicationRunner {
     private final RoleRepository roleRepository;
-    private final IServiceService serviceService;
-    private PasswordEncoder passwordEncoder;
-    private final IUserService userService;
-    private static final String adminEmail ="admin@test.com";
-    private static final String adminPassword = "123";
-    private static final List<String> servicesList = List.of("Electrician", "Plumbing", "Painting", "Cleaning");
+
     @Override
     public void run(ApplicationArguments args) throws Exception {
         addRolesIntoDb();
     }
+
+    /**
+     * Creates a role if it does not exist in the database.
+     *
+     * @param name the name of the role
+     */
     private void createRoleIfNotFound(final RoleName name) {
         Role role = roleRepository.findByName(name);
         if (role == null) {
@@ -40,6 +45,9 @@ public class DatabaseInitialization implements ApplicationRunner {
         }
     }
 
+    /**
+     * Adds roles into the database.
+     */
     private void addRolesIntoDb() {
         createRoleIfNotFound(RoleName.ROLE_ADMIN);
         createRoleIfNotFound(RoleName.ROLE_USER);

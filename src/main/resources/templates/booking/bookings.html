@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:sec="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}">
+<body>
+<div layout:fragment="content">
+    <div class="row" sec:authorize="isFullyAuthenticated()">
+        <th:block>
+            <div class="col-md-12" th:if="${bookings!=null && bookings.size()>0}">
+                <h1 class="section-title" th:text="'Orders (' + ${bookings.size()} + ')' "></h1>
+                <table class="table table-striped table-bordered table-hover">
+                    <thead class="table-dark">
+                    <tr>
+                        <th>Service</th>
+                        <th>Price</th>
+                        <th>Ordered By</th>
+                        <th>Ordered at</th>
+                        <th>Payment</th>
+                        <th>From</th>
+                        <th>To</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="booking: ${bookings}">
+                        <td th:text="${booking.services.name}"></td>
+                        <td th:text="${booking.services.price}"></td>
+                        <td th:text="${booking.user.fullName}"></td>
+                        <td th:text="${booking.createdAt}"></td>
+                        <td th:text="${booking.paymentMethod}"></td>
+                        <td th:text="${booking.startDate}"></td>
+                        <td th:text="${booking.endDate}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </th:block>
+    </div>
+    <div class="row" sec:authorize="!isFullyAuthenticated()">
+        <h1 class="text-center h1 py-2">Welcome to Service To You</h1>
+    </div>
+</div>
+</body>
+</html>

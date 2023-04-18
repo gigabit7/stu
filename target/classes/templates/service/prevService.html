@@ -15,13 +15,13 @@
         <table class="table table-striped table-bordered table-hover">
             <thead class="table-dark">
             <tr>
-                <th>Service Name</th>
+                <th>Service</th>
                 <th>Price</th>
                 <th>Provided By</th>
                 <th>Address</th>
-                <th>Phone</th>
                 <th>Ordered At</th>
-                <th>Payment Method</th>
+                <th>Period</th>
+                <th>Payment</th>
             </tr>
             </thead>
             <tbody>
@@ -30,8 +30,8 @@
                 <td th:text="${booking.services.price}"></td>
                 <td th:text="${booking.services.serviceProvider.user.fullName}"></td>
                 <td th:text="${booking.address}"></td>
-                <td th:text="${booking.num}"></td>
                 <td th:text="${booking.createdAt}"></td>
+                <td th:text="${booking.startDate} + ' To ' + ${booking.endDate}"></td>
                 <td th:text="${booking.paymentMethod}"></td>
             </tr>
             </tbody>

@@ -1,6 +1,5 @@
 package com.example.stu.web.dto;
 
-import com.example.stu.entity.Role;
 import com.example.stu.entity.RoleName;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;

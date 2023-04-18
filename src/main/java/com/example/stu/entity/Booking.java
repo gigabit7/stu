@@ -3,8 +3,8 @@ package com.example.stu.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -17,7 +17,7 @@ public class Booking {
     private Long id;
 
     @JoinColumn(nullable = false)
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER)
     private Services services;
 
     @ManyToOne
@@ -34,4 +34,10 @@ public class Booking {
     private PaymentMethod paymentMethod;
     @Column(name = "created_at", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private LocalDateTime createdAt;
+    @Column(name = "start_date")
+    private LocalDate startDate;
+    @Column(name = "end_date")
+    private LocalDate endDate;
+    @Column(name = "is_confirmed")
+    private Boolean isConfirmed;
 }

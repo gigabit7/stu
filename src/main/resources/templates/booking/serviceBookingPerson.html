@@ -51,6 +51,32 @@
           </p>
         </div>
         <div class="form-group mb-3">
+          <label class="form-label">From <span style="color: crimson">*</span></label>
+          <input class="form-control"
+                 id="startDate"
+                 name="startDate"
+                 required
+                 th:field="*{booking.startDate}"
+                 type="date"
+          />
+          <p th:errors="*{booking.startDate}" class="text-danger"
+             th:if="${#fields.hasErrors('booking.startDate')}">
+          </p>
+        </div>
+        <div class="form-group mb-3">
+          <label class="form-label">To <span style="color: crimson">*</span></label>
+          <input class="form-control"
+                 id="endDate"
+                 name="endDate"
+                 required
+                 th:field="*{booking.endDate}"
+                 type="date"
+          />
+          <p th:errors="*{booking.endDate}" class="text-danger"
+             th:if="${#fields.hasErrors('booking.endDate')}">
+          </p>
+        </div>
+        <div class="form-group mb-3">
           <label class="form-label">Address <span style="color: crimson">*</span></label>
           <input class="form-control"
                  id="address"

@@ -25,6 +25,7 @@
             <input class="form-control"
                    id="service"
                    name="service"
+                   required
                    th:field="*{service.name}"
                    type="text"
             />
@@ -38,6 +39,7 @@
             <input class="form-control"
                    id="price"
                    name="price"
+                   required
                    placeholder="Enter price"
                    th:field="*{service.price}"
                    type="number"

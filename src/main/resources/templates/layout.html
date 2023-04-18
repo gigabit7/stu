@@ -1,3 +1,4 @@
+<!--This is the base layout for all of the html templates-->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security6"
@@ -47,9 +48,15 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" th:href="@{/edit}">Edit Profile</a>
                         </li>
-                        <li class="nav-item" sec:authorize="hasRole('PROVIDER')">
-                            <a class="nav-link active" aria-current="page" th:href="@{/service/edit}">Edit Service</a>
-                        </li>
+                        <th:block sec:authorize="hasRole('PROVIDER')">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" th:href="@{/service/edit}">Edit Service</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" th:href="@{/booking}">Orders</a>
+                            </li>
+                        </th:block>
+
                         <li class="nav-item">
                             <form th:action="@{/logout}" method="post">
                                 <Button type="submit" class="btn btn-primary btn-sm">
@@ -66,9 +73,11 @@
 </div>
 <br>
 <br>
+<!--Main Content holder-->
 <main class="container">
     <div layout:fragment="content" class="row"></div>
 </main>
+<!--Footer-->
 <footer>
     <div class="container">
         <div class="row justify-content-center">
