@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="${title}">Title</title>
+</head>
+<body>
+<p>
+    Thank you for requesting a booking for a <b><span class="text-bg-primary" th:text="${service_name}"></span></b> on <span
+        class="text-bg-primary" th:text="${created_at}"></span>.
+    <br>We have sent the request to the service provider who will let you know
+    shortly if your request has been successfully booked.<br><br>
+
+    Here are your booking details:
+</p>
+<table class="table-bordered table-dark">
+    <tbody>
+    <tr>
+        <td>Service: </td>
+        <td th:text="${service_name}"></td>
+    </tr>
+    <tr>
+        <td>Booking date: </td>
+        <td th:text="${created_at}"></td>
+    </tr>
+    <tr>
+        <td>Time Period: </td>
+        <td th:text="${from} + ' TO ' + ${to}"></td>
+    </tr>
+    <tr>
+        <td>Address: </td>
+        <td th:text="${address}"></td>
+    </tr>
+    <tr>
+        <td>Payment Method: </td>
+        <td th:text="${payment_method}"></td>
+    </tr>
+
+    </tbody>
+</table>
+
+<p>
+    Thank you for choosing <b>Service To You</b> for your service needs.<br>
+    We look forward to helping you find your ideal services!
+    <br><br>
+    Best regards,<br>
+    <b>Service To You [STU]</b>
+</p>
+</body>
+</html>

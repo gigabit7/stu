@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="${title}">Title</title>
+</head>
+<body>
+<p>
+    Congratulations! You have received an order from <b><span th:text="${ordered_by}"></span></b> for your <span
+        th:text="${service_name}"></span> service on <span
+        class="text-bg-primary" th:text="${created_at}"></span>.<br><br>
+
+    Go to your dashboard to either confirm or reject this request.<br><br>
+
+    Here are the details:
+</p>
+<table class="table-bordered table-dark">
+    <tbody>
+    <tr>
+        <td>Your Service: </td>
+        <td th:text="${service_name}"></td>
+    </tr>
+    <tr>
+        <td>Ordered By: </td>
+        <td th:text="${ordered_by}"></td>
+    </tr>
+    <tr>
+        <td>Booking date: </td>
+        <td th:text="${created_at}"></td>
+    </tr>
+    <tr>
+        <td>Time Period: </td>
+        <td th:text="${from} + ' TO ' + ${to}"></td>
+    </tr>
+    <tr>
+        <td>Address: </td>
+        <td th:text="${address}"></td>
+    </tr>
+    <tr>
+        <td>Payment Method: </td>
+        <td th:text="${payment_method}"></td>
+    </tr>
+
+    </tbody>
+</table>
+
+<p>
+    Best regards,<br>
+    <b>Service To You [STU]</b>
+</p>
+</body>
+</html>

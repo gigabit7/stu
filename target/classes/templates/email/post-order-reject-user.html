@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="${title}">Title</title>
+</head>
+<body>
+<p>
+    We are sorry to let you know that your booking for a <b><span class="text-bg-primary" th:text="${service_name}"></span></b> on <span
+        class="text-bg-primary" th:text="${created_at}"></span> has been rejected. <br><br>
+
+    Here were the details of your booking:
+</p>
+<table class="table-bordered table-dark">
+    <tbody>
+    <tr>
+        <td>Service: </td>
+        <td th:text="${service_name}"></td>
+    </tr>
+    <tr>
+        <td>Booking date: </td>
+        <td th:text="${created_at}"></td>
+    </tr>
+    <tr>
+        <td>Time Period: </td>
+        <td th:text="${from} + ' TO ' + ${to}"></td>
+    </tr>
+    <tr>
+        <td>Address: </td>
+        <td th:text="${address}"></td>
+    </tr>
+    <tr>
+        <td>Payment Method: </td>
+        <td th:text="${payment_method}"></td>
+    </tr>
+
+    </tbody>
+</table>
+
+<p>
+    Please do check out our other Service Providers who also provide a
+    <b><span class="text-bg-primary" th:text="${service_name}"></span></b> service on our website.<br><br>
+
+    Thank you for choosing <b>Service To You</b> for your service needs.<br>
+    We look forward to helping you find your ideal services!
+    <br><br>
+    Best regards,<br>
+    <b>Service To You [STU]</b>
+</p>
+</body>
+</html>
