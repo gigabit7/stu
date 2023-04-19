@@ -6,17 +6,18 @@
 </head>
 <body>
 <p>
-    Congratulations! You got an order from <span th:text="${ordered_by}"></span> for <span
-        th:text="${service_name}"></span> on <span
-        class="text-bg-primary" th:text="${created_at}"></span>.
-    <br>Go to your dashboard to confirm/reject the request!<br><br>
+    Congratulations! You have received an order from <b><span th:text="${ordered_by}"></span></b> for your <span
+        th:text="${service_name}"></span> service on <span
+        class="text-bg-primary" th:text="${created_at}"></span>.<br><br>
+
+    Go to your dashboard to either confirm or reject this request.<br><br>
 
     Here are the details:
 </p>
 <table class="table-bordered table-dark">
     <tbody>
     <tr>
-        <td>Service type: </td>
+        <td>Your Service: </td>
         <td th:text="${service_name}"></td>
     </tr>
     <tr>
@@ -44,10 +45,8 @@
 </table>
 
 <p>
-    Thank you!
-    <br>
     Best regards,<br>
-    Service To You [STU]
+    <b>Service To You [STU]</b>
 </p>
 </body>
 </html>

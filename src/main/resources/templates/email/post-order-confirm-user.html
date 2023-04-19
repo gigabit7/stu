@@ -6,18 +6,19 @@
 </head>
 <body>
 <p>
-    We are pleased to let you know, your Booking for <span class="text-bg-primary" th:text="${service_name}"></span> on
+    We are pleased to let you know that your booking request
+    for a <b><span class="text-bg-primary" th:text="${service_name}"></span></b> on
     <span
-            class="text-bg-primary" th:text="${created_at}"></span> has been confirmed.
+            class="text-bg-primary" th:text="${created_at}"></span> has been confirmed!
     <br>
     <br>
 
-    Here are the details of your booking:
+    Here are your booking details:
 </p>
 <table class="table-bordered table-dark">
     <tbody>
     <tr>
-        <td>Service type: </td>
+        <td>Service: </td>
         <td th:text="${service_name}"></td>
     </tr>
     <tr>
@@ -41,10 +42,11 @@
 </table>
 
 <p>
-    Thank you for choosing our services. We look forward to serving you.
-    <br>
+    Thank you for choosing <b>Service To You</b> for your service needs.<br>
+    We look forward to helping you find your ideal services!
+    <br><br>
     Best regards,<br>
-    Service To You [STU]
+    <b>Service To You [STU]</b>
 </p>
 </body>
 </html>
