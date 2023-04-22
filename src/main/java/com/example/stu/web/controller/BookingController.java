@@ -8,17 +8,20 @@ import com.example.stu.service.IProviderService;
 import com.example.stu.service.IServiceService;
 import com.example.stu.web.dto.PayInPersonRequest;
 import jakarta.mail.MessagingException;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 import static com.example.stu.email.EmailType.*;
+
 /**
  * This controller will handle all requests related to booking services.
  */
@@ -50,22 +53,41 @@ public class BookingController {
         }
 
     }
-
     @PostMapping("/pay-online")
-    public String bookService(Model model, @ModelAttribute Booking booking, @AuthenticationPrincipal User userDetails) throws MessagingException {
+    public String bookService(Model model, @Valid @ModelAttribute Booking booking,
+                              BindingResult result,
+                              @AuthenticationPrincipal User userDetails) throws MessagingException {
         booking.setUser(userDetails);
+        if (!bookingService.dateRangeIsValid(booking.getStartDate(), booking.getEndDate())) {
+            result.rejectValue("endDate", "error.booking", "The date range is invalid");
+            Services services = serviceService.getById(booking.getServices().getId());
+            booking.setServices(services);
+            model.addAttribute("booking", booking);
+            return "/booking/serviceBooking";
+        }
         bookingService.save(booking);
-        model.addAttribute("booking", booking);
         emailService.buildEmailDataAndSend(booking, userDetails.getEmail(), PRE_ORDER_USER);
         emailService.buildEmailDataAndSend(booking, booking.getServices().getServiceProvider().getUser().getEmail(), EmailType.PRE_ORDER_PROVIDER);
         return "booking/successfulBooking";
     }
 
     @PostMapping("/pay-person")
-    public String bookServiceInPerson(@ModelAttribute PayInPersonRequest payInPersonRequest, Model model, @AuthenticationPrincipal User userDetails) throws MessagingException {
-        payInPersonRequest.getBooking().setUser(userDetails);
-        Booking booking = bookingService.save(payInPersonRequest.getBooking());
-        model.addAttribute("booking", payInPersonRequest.getBooking());
+    public String bookServiceInPerson(@Valid @ModelAttribute PayInPersonRequest payInPersonRequest,
+                                      Model model,
+                                      @AuthenticationPrincipal User userDetails,
+                                      BindingResult result) throws MessagingException {
+        Booking booking = payInPersonRequest.getBooking();
+        booking.setUser(userDetails);
+        if (!bookingService.dateRangeIsValid(booking.getStartDate(), booking.getEndDate())) {
+            result.rejectValue("booking.endDate", "error.booking", "The date range is invalid");
+            Services services = serviceService.getById(booking.getServices().getId());
+            booking.setServices(services);
+            payInPersonRequest.setBooking(booking);
+            model.addAttribute("payInPersonRequest", payInPersonRequest);
+            return "/booking/serviceBookingPerson";
+        }
+        bookingService.save(booking);
+        model.addAttribute("booking", booking);
         emailService.buildEmailDataAndSend(booking, userDetails.getEmail(), PRE_ORDER_USER);
         emailService.buildEmailDataAndSend(booking, booking.getServices().getServiceProvider().getUser().getEmail(), EmailType.PRE_ORDER_PROVIDER);
         return "booking/successfulBooking";

@@ -2,6 +2,7 @@ package com.example.stu.service;
 
 import com.example.stu.entity.Booking;
 
+import java.time.LocalDate;
 import java.util.List;
 
 /**
@@ -55,4 +56,6 @@ public interface IBookingService {
      * @return A booking that updated in the database.
      */
     Booking rejectBooking(Long id);
+
+    boolean dateRangeIsValid(LocalDate startDate, LocalDate endDate);
 }

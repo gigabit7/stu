@@ -8,6 +8,7 @@ import com.example.stu.service.IServiceService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 /**
@@ -63,5 +64,10 @@ public class IBookingServiceImpl implements IBookingService {
             return booking;
         }
         throw new IllegalStateException("No Booking Found!");
+    }
+
+    @Override
+    public boolean dateRangeIsValid(LocalDate startDate, LocalDate endDate) {
+        return endDate.isAfter(startDate);
     }
 }

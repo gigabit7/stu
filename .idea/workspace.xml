@@ -4,11 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4babc9d3-a09a-4b66-a071-c1962bd0cfbc" name="Changes" comment="email message edits">
+    <list default="true" id="3cb11559-aca0-4058-a5ab-3e6eb2bc02bc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/email/post-order-reject-user.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/email/post-order-reject-user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/booking/successfulBooking.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/booking/successfulBooking.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/email/post-order-reject-user.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/email/post-order-reject-user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/stu/entity/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/stu/entity/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/stu/service/IBookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/stu/service/IBookingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/stu/service/impl/IBookingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/stu/service/impl/IBookingServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/stu/web/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/stu/web/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/stu/web/controller/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/stu/web/controller/BookingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/stu/web/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/stu/web/dto/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/stu/entity/Booking.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/stu/entity/Booking.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/stu/service/IBookingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/stu/service/IBookingService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/stu/service/impl/IBookingServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/stu/service/impl/IBookingServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/stu/web/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/stu/web/controller/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/stu/web/controller/BookingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/stu/web/controller/BookingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/stu/web/dto/UserDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/stu/web/dto/UserDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,25 +46,16 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2OcOzSnomCn8B7yUAhKxEb5FaiK" />
+  <component name="ProjectId" id="2Omx4t7XHvlDw4hijlPz3ZCiuGE" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/ethan/OneDrive/Documents/CO3201/CO3201_stu_proj/stu",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -71,8 +75,8 @@
     </configuration>
     <configuration name="StuApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <envs>
-        <env name="emailPass" value="srjxvncrrrbpwcxo" />
         <env name="mySQLpass" value="Letsdothis123!" />
+        <env name="emailPass" value="srjxvncrrrbpwcxo" />
       </envs>
       <module name="stu_proj" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.stu.StuApplication" />
@@ -84,43 +88,16 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4babc9d3-a09a-4b66-a071-c1962bd0cfbc" name="Changes" comment="" />
-      <created>1681856679959</created>
+      <changelist id="3cb11559-aca0-4058-a5ab-3e6eb2bc02bc" name="Changes" comment="" />
+      <created>1682179384641</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1681856679959</updated>
-      <workItem from="1681856684023" duration="12150000" />
+      <updated>1682179384641</updated>
+      <workItem from="1682179389098" duration="210000" />
     </task>
-    <task id="LOCAL-00001" summary="Service provider accept/reject booking request">
-      <created>1681857580488</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1681857580488</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Service provider accept/reject booking request">
-      <created>1681944487025</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1681944487025</updated>
-    </task>
-    <task id="LOCAL-00003" summary="email message edits">
-      <created>1681944526170</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1681944526170</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Service provider accept/reject booking request" />
-    <MESSAGE value="email message edits" />
-    <option name="LAST_COMMIT_MESSAGE" value="email message edits" />
   </component>
 </project>

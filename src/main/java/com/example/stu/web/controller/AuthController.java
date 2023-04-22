@@ -83,6 +83,8 @@ public class AuthController {
         User existing = userService.findByEmail(user.getEmail());
         if (existing != null) {
             result.rejectValue("email", null, "There is already an account registered with that email");
+        } else if (!user.getPassword().equals(user.getConfirmPassword())) {
+            result.rejectValue("confirmPassword", null, "Passwords do not match");
         }
         if (result.hasErrors()) {
             model.addAttribute("user", user);

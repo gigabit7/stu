@@ -34,9 +34,9 @@ public class Booking {
     private PaymentMethod paymentMethod;
     @Column(name = "created_at", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private LocalDateTime createdAt;
-    @Column(name = "start_date")
+    @Column(name = "start_date", nullable = false)
     private LocalDate startDate;
-    @Column(name = "end_date")
+    @Column(name = "end_date", nullable = false)
     private LocalDate endDate;
     @Column(name = "is_confirmed")
     private Boolean isConfirmed;

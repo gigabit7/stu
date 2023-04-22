@@ -27,4 +27,5 @@ public class UserDto
     private RoleName roleName;
     @NotEmpty(message = "Please enter your Phone Number")
     private String phone;
+    private String confirmPassword;
 }

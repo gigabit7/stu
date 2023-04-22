@@ -12,7 +12,7 @@
             <div class="alert alert-info" th:text="${param.success}"></div>
         </div>
 <!--        Welcome message-->
-        <h1 class="text-center h1 py-2" th:text="'Welcome, ' + ${user.getFullName()} + ' to Service To You'"></h1>
+        <h1 class="text-center h1 py-2" th:text="'Welcome ' + ${user.getFullName()} + ' to Service To You'"></h1>
 <!--        This block is for service provider-->
         <th:block th:if="${isServiceProvider}">
             <h1 class="text-center h5" th:if="${!hasService}">You are not providing any service yet, Please add a
@@ -61,7 +61,20 @@
     </div>
 <!--    This block is for un-authenticated users-->
     <div class="row" sec:authorize="!isFullyAuthenticated()">
-        <h1 class="text-center h1 py-2">Welcome to Service To You</h1>
+        <br>
+        <h1 class="text-center h1 py-2">Welcome to Service To You!</h1>
+        <br>
+        <h3 class="text-center h3 py-2"><br>We are a Service Provider website that aims to connect people
+            who are looking for a service to a professional in that field.</h3>
+        <br>
+        <h3 class="text-center h3 py-2">If you are new to Service To You then we welcome you to register
+            an account as either a user of this service or a service provider.</h3>
+        <br>
+        <h4 class="text-center h4 py-2"><br><br>If you have any inquiries or want to report something then
+            please do not hesitate to contact us, our contact information is:</h4>
+        <br>
+        <h5 class="text-center h5 py-2">Email: epereira2002@gmail.com
+            <br> Telephone number: +44 7654321342</h5>
     </div>
 </div>
 </body>
