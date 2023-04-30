@@ -48,12 +48,10 @@ public class IBookingServiceImpl implements IBookingService {
 
     @Override
     public Booking confirmBooking(Long bookingId) {
-        Booking booking = bookingRepository.findById(bookingId).orElse(null);
-        if (booking != null) {
-            booking.setIsConfirmed(true);
-            return bookingRepository.save(booking);
-        }
-        throw new IllegalStateException("No Booking Found!");
+        Booking booking = bookingRepository.findById(bookingId)
+                .orElseThrow(() -> new IllegalStateException("No Booking Found!"));
+        booking.setIsConfirmed(true);
+        return bookingRepository.save(booking);
     }
 
     @Override

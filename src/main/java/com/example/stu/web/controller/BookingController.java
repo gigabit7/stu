@@ -1,5 +1,6 @@
 package com.example.stu.web.controller;
 
+import com.example.stu.email.Email;
 import com.example.stu.email.EmailService;
 import com.example.stu.email.EmailType;
 import com.example.stu.entity.*;
@@ -35,7 +36,9 @@ public class BookingController {
     private final IProviderService providerService;
 
     @GetMapping("{id}")
-    public String bookServiceForm(@PathVariable Long id, Model model, @AuthenticationPrincipal User userDetails, @RequestParam("payment") String paymentMethod) {
+    public String bookServiceForm(@PathVariable Long id, Model model,
+                                  @AuthenticationPrincipal User userDetails,
+                                  @RequestParam("payment") String paymentMethod) {
         Services service = serviceService.getById(id);
         Booking booking = new Booking();
         booking.setServices(service);
@@ -51,8 +54,8 @@ public class BookingController {
         } else {
             return "redirect:/booking?error=Invalid payment method";
         }
-
     }
+
     @PostMapping("/pay-online")
     public String bookService(Model model, @Valid @ModelAttribute Booking booking,
                               BindingResult result,
@@ -66,8 +69,13 @@ public class BookingController {
             return "/booking/serviceBooking";
         }
         bookingService.save(booking);
-        emailService.buildEmailDataAndSend(booking, userDetails.getEmail(), PRE_ORDER_USER);
-        emailService.buildEmailDataAndSend(booking, booking.getServices().getServiceProvider().getUser().getEmail(), EmailType.PRE_ORDER_PROVIDER);
+        Email emailToUser =  emailService.buildEmailData(booking, userDetails.getEmail(), PRE_ORDER_USER);
+        Email emailToProvider = emailService.buildEmailData(booking, booking.getServices().getServiceProvider().getUser().getEmail(),
+                EmailType.PRE_ORDER_PROVIDER);
+
+        emailService.sendEmail(emailToUser);
+        emailService.sendEmail(emailToProvider);
+
         return "booking/successfulBooking";
     }
 
@@ -88,22 +96,29 @@ public class BookingController {
         }
         bookingService.save(booking);
         model.addAttribute("booking", booking);
-        emailService.buildEmailDataAndSend(booking, userDetails.getEmail(), PRE_ORDER_USER);
-        emailService.buildEmailDataAndSend(booking, booking.getServices().getServiceProvider().getUser().getEmail(), EmailType.PRE_ORDER_PROVIDER);
+        Email emailToUser =  emailService.buildEmailData(booking, userDetails.getEmail(), PRE_ORDER_USER);
+        Email emailToProvider = emailService.buildEmailData(booking, booking.getServices().getServiceProvider().getUser().getEmail(), EmailType.PRE_ORDER_PROVIDER);
+
+        emailService.sendEmail(emailToUser);
+        emailService.sendEmail(emailToProvider);
         return "booking/successfulBooking";
     }
 
     @PostMapping("/confirm/{id}")
     public String confirmBooking(@PathVariable(name = "id") Long id) throws MessagingException {
         Booking booking = bookingService.confirmBooking(id);
-        emailService.buildEmailDataAndSend(booking, booking.getUser().getEmail(), POST_ORDER_CONFIRM_USER);
+        Email emailToUser = emailService.buildEmailData(booking, booking.getUser().getEmail(), POST_ORDER_CONFIRM_USER);
+
+        emailService.sendEmail(emailToUser);
         return "redirect:/?success=Order Confirmed Successfully!";
     }
 
     @PostMapping("/reject/{id}")
     public String rejectBooking(@PathVariable(name = "id") Long id) throws MessagingException {
         Booking booking = bookingService.rejectBooking(id);
-        emailService.buildEmailDataAndSend(booking, booking.getUser().getEmail(), POST_ORDER_REJECT_USER);
+        Email emailToUser = emailService.buildEmailData(booking, booking.getUser().getEmail(), POST_ORDER_REJECT_USER);
+
+        emailService.sendEmail(emailToUser);
         return "redirect:/?success=Order Rejected Successfully!";
     }
 

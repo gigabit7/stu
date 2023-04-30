@@ -4,24 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3cb11559-aca0-4058-a5ab-3e6eb2bc02bc" name="Changes" comment="">
+    <list default="true" id="aaf3f1bb-bb0a-465d-88b3-be43469b9062" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/stu/email/Email.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/stu/email/EmailServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/stu/repository/BookingRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/stu/repository/RoleRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/stu/repository/ServiceProviderRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/stu/repository/UserRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/stu/service/impl/IBookingServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/stu/service/impl/IProviderServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/stu/service/impl/IUserServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/stu/service/impl/ServiceServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/stu/web/controller/BookingControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/stu/entity/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/stu/entity/Booking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/stu/service/IBookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/stu/service/IBookingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/stu/email/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/stu/email/EmailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/stu/email/EmailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/stu/email/EmailServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/stu/service/impl/IBookingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/stu/service/impl/IBookingServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/stu/web/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/stu/web/controller/AuthController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/stu/web/controller/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/stu/web/controller/BookingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/stu/web/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/stu/web/dto/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/stu/entity/Booking.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/stu/entity/Booking.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/stu/service/IBookingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/stu/service/IBookingService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/stu/email/EmailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/stu/email/EmailService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/stu/email/EmailServiceImpl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/stu/email/EmailServiceImpl$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/stu/email/EmailServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/stu/email/EmailServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/stu/service/impl/IBookingServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/stu/service/impl/IBookingServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/stu/web/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/stu/web/controller/AuthController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/stu/web/controller/BookingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/stu/web/controller/BookingController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/stu/web/dto/UserDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/stu/web/dto/UserDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +53,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2Omx4t7XHvlDw4hijlPz3ZCiuGE" />
+  <component name="ProjectId" id="2P6E2GqIxxd9uNpEjf6MRd9l7Oj" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -56,10 +63,88 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.com.example.stu in stu_proj">
+    <configuration name="IUserServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="stu_proj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.stu.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.stu.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.example.stu.service.impl.IUserServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceProviderRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="stu_proj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.stu.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.stu.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.stu.repository.ServiceProviderRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="stu_proj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.stu.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.stu.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.example.stu.service.impl.ServiceServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="stu_proj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.stu.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.stu.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.stu.repository.UserRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.example.stu in stu_proj" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="stu_proj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.stu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.stu" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="stu" />
       <method v="2">
@@ -76,6 +161,7 @@
     <configuration name="StuApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <envs>
         <env name="mySQLpass" value="Letsdothis123!" />
+        <env name="emailUser" value="epereira2002@gmail.com" />
         <env name="emailPass" value="srjxvncrrrbpwcxo" />
       </envs>
       <module name="stu_proj" />
@@ -84,16 +170,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.IUserServiceImplTest" />
+      <item itemvalue="JUnit.ServiceProviderRepositoryTest" />
+      <item itemvalue="JUnit.ServiceServiceTest" />
+      <item itemvalue="JUnit.UserRepositoryTest" />
+      <item itemvalue="JUnit.com.example.stu in stu_proj" />
+      <item itemvalue="Spring Boot.StuApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.com.example.stu in stu_proj" />
+        <item itemvalue="JUnit.ServiceServiceTest" />
+        <item itemvalue="JUnit.IUserServiceImplTest" />
+        <item itemvalue="JUnit.UserRepositoryTest" />
+        <item itemvalue="JUnit.ServiceProviderRepositoryTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3cb11559-aca0-4058-a5ab-3e6eb2bc02bc" name="Changes" comment="" />
-      <created>1682179384641</created>
+      <changelist id="aaf3f1bb-bb0a-465d-88b3-be43469b9062" name="Changes" comment="" />
+      <created>1682768934140</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1682179384641</updated>
-      <workItem from="1682179389098" duration="210000" />
+      <updated>1682768934140</updated>
+      <workItem from="1682768938889" duration="9296000" />
     </task>
     <servers />
   </component>
