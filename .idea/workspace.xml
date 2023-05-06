@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aaf3f1bb-bb0a-465d-88b3-be43469b9062" name="Changes" comment="JUnit tests">
+    <list default="true" id="aaf3f1bb-bb0a-465d-88b3-be43469b9062" name="Changes" comment="edits">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/stu/web/controller/BookingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/stu/web/controller/BookingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/service/prevService.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/service/prevService.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +177,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1682768934140</updated>
-      <workItem from="1682768938889" duration="11849000" />
+      <workItem from="1682768938889" duration="15428000" />
     </task>
     <task id="LOCAL-00001" summary="JUnit tests">
       <created>1682881755055</created>
@@ -188,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682881755055</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="edits">
+      <created>1683125866503</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683125866503</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +201,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="JUnit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="JUnit tests" />
+    <MESSAGE value="edits" />
+    <option name="LAST_COMMIT_MESSAGE" value="edits" />
   </component>
 </project>

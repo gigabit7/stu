@@ -4,7 +4,7 @@
       layout:decorate="~{layout}">
 <body>
 <div class="container" layout:fragment="content">
-    <h3 class="h4 py-5" th:if="${#lists.isEmpty(bookings)}"> You did not ordered any service!
+    <h3 class="h4 py-5" th:if="${#lists.isEmpty(bookings)}"> You have not ordered any services!
         Click
         <a th:href="@{/service/new}">here</a> to order a service
     </h3>
